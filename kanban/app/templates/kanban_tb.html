@@ -1,0 +1,27 @@
+<! kanban_tb: part of index !>
+
+<div class="col-md-4" align="center"><h3><b><u>{{ stage }}</u></b></h3>
+
+    {% for task in kanban_tb %}
+        {% if task.stage == stage %}
+
+            <table>
+
+                <tr>
+                    <td><center><h4>{{ task.task }}</h4></center></td>
+                </tr>
+
+                <tr>
+                    {% include "buttons.html" %}
+                </tr>
+
+                <tr>
+                    <br>
+                </tr>
+
+            </table>
+
+        {% endif %}
+    {% endfor %}
+
+</div>

@@ -1,0 +1,25 @@
+<! buttons: part of kanban_tb!>
+
+                    <td>
+                        <center>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <a class="btn btn-outline-danger" href="/delete/{{ task.id_ }}">Delete</a>
+
+                            {% if stage == "ToDo" %}
+                                <a class="btn btn-outline-primary" href="/move_to/Doing/{{ task.id_ }}"> Doing </a>
+                                <a class="btn btn-outline-success" href="/move_to/Done/{{ task.id_ }}"> Done </a>
+
+                            {% elif stage == "Doing" %}
+                                <a class="btn btn-outline-secondary" href="/move_to/ToDo/{{ task.id_ }}"> ToDo </a>
+                                <a class="btn btn-outline-success" href="/move_to/Done/{{ task.id_ }}"> Done </a>
+
+                            {% elif stage == "Done" %}
+                                <a class="btn btn-outline-secondary" href="/move_to/ToDo/{{ task.id_ }}"> ToDo </a>
+                                <a class="btn btn-outline-primary" href="/move_to/Doing/{{ task.id_ }}"> Doing </a>
+
+                            {% endif %}
+
+                            </div>
+                        </center>
+                    </td>
+
