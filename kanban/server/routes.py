@@ -1,7 +1,7 @@
 from flask import render_template, url_for, redirect, request
 
-from app.db import DB
-from app.db.models import Kanban
+from kanban.db import DB
+from kanban.db.models import Kanban
 from . import SERVER_BLUEPRINT
 
 
