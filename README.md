@@ -17,10 +17,11 @@ Basically, it's a tool that allows you to get more visual overview of the tasks 
 Paste this code into your terminal : 
 
 ```
-https://github.com/AsiaKot/kanban-app.git
+git clone https://github.com/AsiaKot/kanban-app.git
+docker-compose up --build
 ```
 
-The app will be available on: http://127.0.0.1:5000/
+The app will be available on: http://localhost:5050/
 
 ## Application view
 
